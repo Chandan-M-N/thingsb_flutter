@@ -16,14 +16,12 @@ import 'package:thingsboard_app/utils/services/local_database/i_local_database_s
 import 'package:thingsboard_app/widgets/two_page_view.dart';
 import 'package:uni_links/uni_links.dart';
 import 'package:universal_platform/universal_platform.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'config/themes/tb_theme.dart';
-import 'generated/l10n.dart';
+import 'package:thingsboard_app/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-//  await FlutterDownloader.initialize();
-//  await Permission.storage.request();
   await Hive.initFlutter();
 
   await setUpRootDependencies();
@@ -57,6 +55,9 @@ void main() async {
 class ThingsboardApp extends StatefulWidget {
   ThingsboardApp({Key? key}) : super(key: key);
 
+  static ThingsboardAppState? of(BuildContext context) =>
+      context.findAncestorStateOfType<ThingsboardAppState>();
+
   @override
   ThingsboardAppState createState() => ThingsboardAppState();
 }
@@ -69,6 +70,14 @@ class ThingsboardAppState extends State<ThingsboardApp>
 
   final mainAppKey = GlobalKey();
   final dashboardKey = GlobalKey();
+
+  Locale? _locale;
+
+  void setLocale(Locale locale) {
+    setState(() {
+      _locale = locale;
+    });
+  }
 
   @override
   void initState() {
@@ -178,30 +187,33 @@ class ThingsboardAppState extends State<ThingsboardApp>
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      locale: _locale,
       localizationsDelegates: [
-        S.delegate,
+        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
+        S.delegate,
+        
       ],
-      supportedLocales: S.delegate.supportedLocales,
-      onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
+      supportedLocales: AppLocalizations.supportedLocales,
+      onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
       themeMode: ThemeMode.light,
       home: TwoPageView(
         controller: _mainPageViewController,
         first: MaterialApp(
           debugShowCheckedModeBanner: false,
           key: mainAppKey,
-          scaffoldMessengerKey:
-              getIt<ThingsboardAppRouter>().tbContext.messengerKey,
+          scaffoldMessengerKey: getIt<ThingsboardAppRouter>().tbContext.messengerKey,
           localizationsDelegates: [
-            S.delegate,
+            AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
+            S.delegate
           ],
-          supportedLocales: S.delegate.supportedLocales,
-          onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
+          supportedLocales: AppLocalizations.supportedLocales,
+          onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
           theme: tbTheme,
           themeMode: ThemeMode.light,
           darkTheme: tbDarkTheme,
@@ -213,15 +225,15 @@ class ThingsboardAppState extends State<ThingsboardApp>
         second: MaterialApp(
           debugShowCheckedModeBanner: false,
           key: dashboardKey,
-          // scaffoldMessengerKey: appRouter.tbContext.messengerKey,
           localizationsDelegates: [
-            S.delegate,
+            AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
+            S.delegate
           ],
-          supportedLocales: S.delegate.supportedLocales,
-          onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
+          supportedLocales: AppLocalizations.supportedLocales,
+          onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
           theme: tbTheme,
           themeMode: ThemeMode.light,
           darkTheme: tbDarkTheme,

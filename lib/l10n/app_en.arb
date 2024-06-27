@@ -1,4 +1,6 @@
 {
+  "@@locale": "en",
+  
   "appTitle": "ThingsBoard",
 
   "home": "Home",
@@ -17,7 +19,7 @@
   "email": "Email",
   "emailRequireText": "Email is required.",
   "emailInvalidText": "Invalid email format.",
-  "username": "username",
+  "username": "Username",
   "password": "Password",
   "passwordRequireText": "Password is required.",
   "passwordForgotText": "Forgot Password?",
@@ -26,9 +28,9 @@
   "requestPasswordReset": "Request password reset",
   "passwordResetLinkSuccessfullySentNotification": "Password reset link was successfully sent!",
 
-  "OR": "OR",
-  "No": "No",
-  "Yes": "Yes",
+  "or": "OR",
+  "no": "No",
+  "yes": "Yes",
 
   "title": "Title",
   "country": "Country",
@@ -64,21 +66,21 @@
   "customer": "Customer",
 
   "changePassword": "Change Password",
-  "currentPassword": "currentPassword",
+  "currentPassword": "Current password",
   "currentPasswordRequireText": "Current password is required.",
   "currentPasswordStar": "Current password *",
-  "newPassword": "newPassword",
+  "newPassword": "New password",
   "newPasswordRequireText": "New password is required.",
   "newPasswordStar": "New password *",
-  "newPassword2": "newPassword2",
+  "newPassword2": "New password again",
   "newPassword2RequireText": "New password again is required.",
   "newPassword2Star": "New password again *",
-  "passwordErrorNotification": "Entered passwords must be same!",
+  "passwordErrorNotification": "Entered passwords must be the same!",
 
   "emailStar": "Email *",
-  "firstName": "firstName",
+  "firstName": "First name",
   "firstNameUpper": "First Name",
-  "lastName": "lastName",
+  "lastName": "Last name",
   "lastNameUpper": "Last Name",
   "profileSuccessNotification": "Profile successfully updated",
   "passwordSuccessNotification": "Password successfully changed",
@@ -97,7 +99,7 @@
   "emailAuthDescription": "A security code has been sent to your email address at {contact}.",
   "backupCodeAuthDescription": "Please enter one of your backup codes.",
   "verificationCodeInvalid": "Invalid verification code format",
-  "toptAuthPlaceholder": "Code",
+  "totpAuthPlaceholder": "Code",
   "smsAuthPlaceholder": "SMS code",
   "emailAuthPlaceholder": "Email code",
   "backupCodeAuthPlaceholder": "Backup code",
@@ -105,8 +107,10 @@
   "verificationCodeManyRequest": "Too many requests check verification code",
   "tryAnotherWay": "Try another way",
   "selectWayToVerify": "Select a way to verify",
-  "mfaProviderTopt": "Authenticator app",
+  "mfaProviderTotp": "Authenticator app",
   "mfaProviderSms": "SMS",
   "mfaProviderEmail": "Email",
-  "mfaProviderBackupCode": "Backup code"
+  "mfaProviderBackupCode": "Backup code",
+  "language": "Language",
+  "other_existing_keys": "values"
 }

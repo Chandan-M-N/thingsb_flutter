@@ -9,6 +9,7 @@ import 'package:thingsboard_app/utils/services/endpoint/i_endpoint_service.dart'
 import 'package:thingsboard_app/utils/services/firebase/i_firebase_service.dart';
 import 'package:thingsboard_app/utils/services/notification_service.dart';
 import 'package:thingsboard_client/thingsboard_client.dart';
+import 'package:thingsboard_app/widgets/language_selector.dart';
 
 class MorePage extends TbContextWidget {
   MorePage(TbContext tbContext) : super(tbContext);
@@ -105,7 +106,11 @@ class _MorePageState extends TbContextState<MorePage>
                       onTap: () {
                         tbContext.logout(
                             requestConfig: RequestConfig(ignoreErrors: true));
-                      })
+                      }),
+                  SizedBox(height: 8),
+                  Divider(color: Color(0xFFEDEDED)),
+                  SizedBox(height: 8),
+                  LanguageSelector(),  // Add the language selector here
                 ],
               ),
             )));

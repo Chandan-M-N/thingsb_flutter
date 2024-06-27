@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "342234952355",
+    "project_id": "sensorweb-b5505",
+    "storage_bucket": "sensorweb-b5505.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342234952355:android:d9f89203811538de674516",
+        "android_client_info": {
+          "package_name": "org.thingsboard.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpyvKDUyx7J5ZKV84iL7th7LBzXSc_Dd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
