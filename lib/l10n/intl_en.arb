@@ -1,6 +1,4 @@
 {
-  "@@locale": "en",
-  
   "appTitle": "ThingsBoard",
 
   "home": "Home",
@@ -19,7 +17,7 @@
   "email": "Email",
   "emailRequireText": "Email is required.",
   "emailInvalidText": "Invalid email format.",
-  "username": "Username",
+  "username": "username",
   "password": "Password",
   "passwordRequireText": "Password is required.",
   "passwordForgotText": "Forgot Password?",
@@ -66,21 +64,21 @@
   "customer": "Customer",
 
   "changePassword": "Change Password",
-  "currentPassword": "Current password",
+  "currentPassword": "currentPassword",
   "currentPasswordRequireText": "Current password is required.",
   "currentPasswordStar": "Current password *",
-  "newPassword": "New password",
+  "newPassword": "newPassword",
   "newPasswordRequireText": "New password is required.",
   "newPasswordStar": "New password *",
-  "newPassword2": "New password again",
+  "newPassword2": "newPassword2",
   "newPassword2RequireText": "New password again is required.",
   "newPassword2Star": "New password again *",
-  "passwordErrorNotification": "Entered passwords must be the same!",
+  "passwordErrorNotification": "Entered passwords must be same!",
 
   "emailStar": "Email *",
-  "firstName": "First name",
+  "firstName": "firstName",
   "firstNameUpper": "First Name",
-  "lastName": "Last name",
+  "lastName": "lastName",
   "lastNameUpper": "Last Name",
   "profileSuccessNotification": "Profile successfully updated",
   "passwordSuccessNotification": "Password successfully changed",
@@ -99,7 +97,7 @@
   "emailAuthDescription": "A security code has been sent to your email address at {contact}.",
   "backupCodeAuthDescription": "Please enter one of your backup codes.",
   "verificationCodeInvalid": "Invalid verification code format",
-  "totpAuthPlaceholder": "Code",
+  "toptAuthPlaceholder": "Code",
   "smsAuthPlaceholder": "SMS code",
   "emailAuthPlaceholder": "Email code",
   "backupCodeAuthPlaceholder": "Backup code",
@@ -107,10 +105,12 @@
   "verificationCodeManyRequest": "Too many requests check verification code",
   "tryAnotherWay": "Try another way",
   "selectWayToVerify": "Select a way to verify",
-  "mfaProviderTotp": "Authenticator app",
+  "mfaProviderTopt": "Authenticator app",
   "mfaProviderSms": "SMS",
   "mfaProviderEmail": "Email",
   "mfaProviderBackupCode": "Backup code",
+
   "language": "Language",
-  "other_existing_keys": "values"
+  "otherExistingKeys": "values",
+  "notifications": "Notifications"
 }

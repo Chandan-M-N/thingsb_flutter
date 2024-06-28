@@ -11,6 +11,7 @@ import 'package:thingsboard_app/utils/services/notification_service.dart';
 import 'package:thingsboard_client/thingsboard_client.dart';
 import 'package:thingsboard_app/widgets/language_selector.dart';
 
+
 class MorePage extends TbContextWidget {
   MorePage(TbContext tbContext) : super(tbContext);
 
@@ -257,7 +258,7 @@ class MoreMenuItem {
         case Authority.SYS_ADMIN:
           items.add(
             MoreMenuItem(
-              title: 'Notifications',
+              title: S.of(context).notifications,
               icon: Icons.notifications_active,
               path: '/notifications',
               showAdditionalIcon: true,
@@ -284,7 +285,7 @@ class MoreMenuItem {
                 icon: Icons.track_changes,
                 path: '/auditLogs'),
             MoreMenuItem(
-              title: 'Notifications',
+              title: S.of(context).notifications,
               icon: Icons.notifications_active,
               path: '/notifications',
               showAdditionalIcon: true,
@@ -302,7 +303,7 @@ class MoreMenuItem {
                 icon: Icons.domain,
                 path: '/assets'),
             MoreMenuItem(
-              title: 'Notifications',
+              title: S.of(context).notifications,
               icon: Icons.notifications_active,
               path: '/notifications',
               showAdditionalIcon: true,

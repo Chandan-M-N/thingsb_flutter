@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:thingsboard_app/generated/l10n.dart';
 import 'package:thingsboard_app/main.dart';
 
 
@@ -23,7 +23,7 @@ class LanguageSelector extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(AppLocalizations.of(context)!.language),
+        Text(S.of(context).language),
         DropdownButton<Locale>(
           value: initialLocale, // Ensure this value exists in the items list
           onChanged: (Locale? newLocale) {

@@ -22,9 +22,6 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "No": MessageLookupByLibrary.simpleMessage("否"),
-        "OR": MessageLookupByLibrary.simpleMessage("或"),
-        "Yes": MessageLookupByLibrary.simpleMessage("是"),
         "actionData": MessageLookupByLibrary.simpleMessage("动作数据"),
         "active": MessageLookupByLibrary.simpleMessage("激活"),
         "address": MessageLookupByLibrary.simpleMessage("地址"),
@@ -62,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("主页"),
         "inactive": MessageLookupByLibrary.simpleMessage("失活"),
         "label": MessageLookupByLibrary.simpleMessage("标签"),
+        "language": MessageLookupByLibrary.simpleMessage("语言"),
         "lastName": MessageLookupByLibrary.simpleMessage("姓"),
         "lastNameUpper": MessageLookupByLibrary.simpleMessage("姓"),
         "listIsEmptyText": MessageLookupByLibrary.simpleMessage("列表当前为空"),
@@ -78,7 +76,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "newPassword2Star": MessageLookupByLibrary.simpleMessage("再次输入新密码 *"),
         "newPasswordRequireText": MessageLookupByLibrary.simpleMessage("输入新密码"),
         "newPasswordStar": MessageLookupByLibrary.simpleMessage("新密码 *"),
+        "no": MessageLookupByLibrary.simpleMessage("否"),
         "notImplemented": MessageLookupByLibrary.simpleMessage("未实现!"),
+        "notifications": MessageLookupByLibrary.simpleMessage("通知"),
+        "or": MessageLookupByLibrary.simpleMessage("或"),
+        "otherExistingKeys": MessageLookupByLibrary.simpleMessage("values"),
         "password": MessageLookupByLibrary.simpleMessage("密码"),
         "passwordErrorNotification":
             MessageLookupByLibrary.simpleMessage("输入的密码必须相同"),
@@ -102,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title": MessageLookupByLibrary.simpleMessage("标题"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("再试一次"),
         "type": MessageLookupByLibrary.simpleMessage("类型"),
-        "username": MessageLookupByLibrary.simpleMessage("用户名")
+        "username": MessageLookupByLibrary.simpleMessage("用户名"),
+        "yes": MessageLookupByLibrary.simpleMessage("是")
       };
 }

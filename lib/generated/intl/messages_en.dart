@@ -31,9 +31,6 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "No": MessageLookupByLibrary.simpleMessage("No"),
-        "OR": MessageLookupByLibrary.simpleMessage("OR"),
-        "Yes": MessageLookupByLibrary.simpleMessage("Yes"),
         "actionData": MessageLookupByLibrary.simpleMessage("Action data"),
         "active": MessageLookupByLibrary.simpleMessage("Active"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
@@ -90,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "inactive": MessageLookupByLibrary.simpleMessage("Inactive"),
         "label": MessageLookupByLibrary.simpleMessage("Label"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastName": MessageLookupByLibrary.simpleMessage("lastName"),
         "lastNameUpper": MessageLookupByLibrary.simpleMessage("Last Name"),
         "listIsEmptyText": MessageLookupByLibrary.simpleMessage(
@@ -117,8 +115,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("New password is required."),
         "newPasswordStar":
             MessageLookupByLibrary.simpleMessage("New password *"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "notImplemented":
             MessageLookupByLibrary.simpleMessage("Not implemented!"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
+        "or": MessageLookupByLibrary.simpleMessage("OR"),
+        "otherExistingKeys": MessageLookupByLibrary.simpleMessage("values"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordErrorNotification": MessageLookupByLibrary.simpleMessage(
             "Entered passwords must be same!"),
@@ -168,6 +170,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verificationCodeManyRequest": MessageLookupByLibrary.simpleMessage(
             "Too many requests check verification code"),
         "verifyYourIdentity":
-            MessageLookupByLibrary.simpleMessage("Verify your identity")
+            MessageLookupByLibrary.simpleMessage("Verify your identity"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

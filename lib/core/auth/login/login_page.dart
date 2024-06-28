@@ -164,7 +164,7 @@ class _LoginPageState extends TbPageState<LoginPage> {
                                     Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 16),
-                                      child: Text('${S.of(context).OR}'),
+                                      child: Text('${S.of(context).or}'),
                                     ),
                                     Flexible(child: Divider())
                                   ],

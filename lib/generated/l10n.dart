@@ -281,30 +281,30 @@ class S {
   }
 
   /// `OR`
-  String get OR {
+  String get or {
     return Intl.message(
       'OR',
-      name: 'OR',
+      name: 'or',
       desc: '',
       args: [],
     );
   }
 
   /// `No`
-  String get No {
+  String get no {
     return Intl.message(
       'No',
-      name: 'No',
+      name: 'no',
       desc: '',
       args: [],
     );
   }
 
   /// `Yes`
-  String get Yes {
+  String get yes {
     return Intl.message(
       'Yes',
-      name: 'Yes',
+      name: 'yes',
       desc: '',
       args: [],
     );
@@ -989,6 +989,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `values`
+  String get otherExistingKeys {
+    return Intl.message(
+      'values',
+      name: 'otherExistingKeys',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notifications`
+  String get notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'notifications',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -997,6 +1027,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'es'),
       Locale.fromSubtags(languageCode: 'zh'),
     ];
   }
