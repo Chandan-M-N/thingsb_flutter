@@ -58,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Backup code"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change Password"),
+        "chinese": MessageLookupByLibrary.simpleMessage("Chinese"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "continueText": MessageLookupByLibrary.simpleMessage("Continue"),
         "country": MessageLookupByLibrary.simpleMessage("Country"),
@@ -79,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailRequireText":
             MessageLookupByLibrary.simpleMessage("Email is required."),
         "emailStar": MessageLookupByLibrary.simpleMessage("Email *"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "entityType": MessageLookupByLibrary.simpleMessage("Entity Type"),
         "failureDetails":
             MessageLookupByLibrary.simpleMessage("Failure details"),
@@ -116,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "newPasswordStar":
             MessageLookupByLibrary.simpleMessage("New password *"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
+        "noAlarmFound": MessageLookupByLibrary.simpleMessage("No alarms found"),
         "notImplemented":
             MessageLookupByLibrary.simpleMessage("Not implemented!"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
@@ -144,10 +147,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Request password reset"),
         "resendCode": MessageLookupByLibrary.simpleMessage("Resend code"),
         "resendCodeWait": m1,
+        "selectLanguage":
+            MessageLookupByLibrary.simpleMessage("Select Language"),
         "selectWayToVerify":
             MessageLookupByLibrary.simpleMessage("Select a way to verify"),
         "smsAuthDescription": m2,
         "smsAuthPlaceholder": MessageLookupByLibrary.simpleMessage("SMS code"),
+        "spanish": MessageLookupByLibrary.simpleMessage("Spanish"),
         "stateOrProvince":
             MessageLookupByLibrary.simpleMessage("State / Province"),
         "systemAdministrator":

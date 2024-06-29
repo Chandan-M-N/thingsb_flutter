@@ -89,5 +89,11 @@
   "tryAgain": "再试一次",
   "language": "语言",
   "otherExistingKeys": "values",
-  "notifications" : "通知"
+  "notifications" : "通知",
+  "english": "English",
+  "chinese": "Chinese",
+  "spanish": "Spanish",
+  "noAlarmFound" : "未发现警报",
+  "selectLanguage":"选择语言"
+
 }

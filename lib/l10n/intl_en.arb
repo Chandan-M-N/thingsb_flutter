@@ -112,5 +112,10 @@
 
   "language": "Language",
   "otherExistingKeys": "values",
-  "notifications": "Notifications"
+  "notifications": "Notifications",
+  "english": "English",
+  "chinese": "Chinese",
+  "spanish": "Spanish",
+  "noAlarmFound" : "No alarms found",
+  "selectLanguage":"Select Language"
 }

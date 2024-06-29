@@ -11,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shared_preferences: ^2.0.13
   thingsboard_client: ^1.2.0
   intl: ^0.18.1
   intl_utils: ^2.1.0

@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -17,8 +16,9 @@ import 'package:thingsboard_app/widgets/two_page_view.dart';
 import 'package:uni_links/uni_links.dart';
 import 'package:universal_platform/universal_platform.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'config/themes/tb_theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:thingsboard_app/generated/l10n.dart';
+import 'config/themes/tb_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -73,16 +73,29 @@ class ThingsboardAppState extends State<ThingsboardApp>
 
   Locale? _locale;
 
-  void setLocale(Locale locale) {
+  void setLocale(Locale locale) async {
     setState(() {
       _locale = locale;
     });
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('selectedLocale', locale.languageCode);
   }
 
   @override
   void initState() {
     super.initState();
+    _loadLocale();
     getIt<ThingsboardAppRouter>().tbContext.setMainDashboardHolder(this);
+  }
+
+  void _loadLocale() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? languageCode = prefs.getString('selectedLocale');
+    if (languageCode != null) {
+      setState(() {
+        _locale = Locale(languageCode);
+      });
+    }
   }
 
   @override
@@ -194,10 +207,10 @@ class ThingsboardAppState extends State<ThingsboardApp>
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
         S.delegate,
-        
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
+      onGenerateTitle: (BuildContext context) =>
+          AppLocalizations.of(context)!.appTitle,
       themeMode: ThemeMode.light,
       home: TwoPageView(
         controller: _mainPageViewController,
@@ -210,10 +223,11 @@ class ThingsboardAppState extends State<ThingsboardApp>
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
-            S.delegate
+            S.delegate,
           ],
           supportedLocales: AppLocalizations.supportedLocales,
-          onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
+          onGenerateTitle: (BuildContext context) =>
+              AppLocalizations.of(context)!.appTitle,
           theme: tbTheme,
           themeMode: ThemeMode.light,
           darkTheme: tbDarkTheme,
@@ -230,10 +244,11 @@ class ThingsboardAppState extends State<ThingsboardApp>
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
-            S.delegate
+            S.delegate,
           ],
           supportedLocales: AppLocalizations.supportedLocales,
-          onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
+          onGenerateTitle: (BuildContext context) =>
+              AppLocalizations.of(context)!.appTitle,
           theme: tbTheme,
           themeMode: ThemeMode.light,
           darkTheme: tbDarkTheme,

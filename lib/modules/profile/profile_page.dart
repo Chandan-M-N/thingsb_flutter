@@ -1,10 +1,10 @@
+import 'package:thingsboard_app/widgets/language_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:thingsboard_app/generated/l10n.dart';
 import 'package:thingsboard_app/modules/profile/change_password_page.dart';
 import 'package:thingsboard_app/widgets/tb_app_bar.dart';
-
 import 'package:thingsboard_app/core/context/tb_context.dart';
 import 'package:thingsboard_app/core/context/tb_context_widget.dart';
 import 'package:thingsboard_app/widgets/tb_progress_indicator.dart';
@@ -101,6 +101,8 @@ class _ProfilePageState extends TbPageState<ProfilePage> {
                                 border: OutlineInputBorder(),
                                 labelText: '${S.of(context).lastNameUpper}'),
                           ),
+                          SizedBox(height: 24),
+                          LanguageSelector(), // Added the LanguageSelector widget
                           SizedBox(height: 24),
                           OutlinedButton(
                               style: OutlinedButton.styleFrom(
